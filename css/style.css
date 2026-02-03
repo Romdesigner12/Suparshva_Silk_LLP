@@ -17,7 +17,7 @@ body {
 
 /* --- PHONE FRAME (Your Standard) --- */
 .phone-frame {
-    background-color: #fff;
+    background-color: #f9f6ea;
     width: 100%;
     max-width: 380px;
     height: 780px; /* Fixed Height */
