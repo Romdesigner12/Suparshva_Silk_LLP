@@ -1,0 +1,273 @@
+/* --- RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3f3f3; /* Neutral background */
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* --- PHONE FRAME (Your Standard) --- */
+.phone-frame {
+    background-color: #fff;
+    width: 100%;
+    max-width: 380px;
+    height: 780px; /* Fixed Height */
+    border: 12px solid #1a1a1a;
+    border-radius: 40px;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- ANIMATED SILK HEADER --- */
+.silk-header {
+    height: 140px;
+    background: linear-gradient(135deg, #580c1f, #8b1c35); /* Royal Maroon */
+    position: relative;
+    border-bottom-left-radius: 50% 20px;
+    border-bottom-right-radius: 50% 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Content Container */
+.card-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    margin-top: -50px; /* Pulls content up into header */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- LOGO SECTION --- */
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.logo-circle {
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 50%;
+    border: 3px solid #d4af37; /* Gold Border */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo-placeholder {
+    color: #ccc;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- TEXT DETAILS --- */
+.header-text {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #580c1f; /* Maroon */
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.tagline {
+    font-size: 11px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.gold-divider {
+    width: 40px;
+    height: 2px;
+    background-color: #d4af37;
+    margin: 10px auto;
+}
+
+/* --- BUTTONS & ANIMATIONS --- */
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: auto;
+}
+
+.btn-row {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 14px 20px;
+    border-radius: 50px; /* Pill Shape */
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    overflow: hidden; /* For the sheen effect */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+}
+
+.btn-link.half {
+    flex: 1;
+    justify-content: center;
+}
+
+/* Icon Styling */
+.icon-box {
+    margin-right: 15px;
+    color: #580c1f;
+    font-size: 18px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* --- HOVER EFFECTS --- */
+
+/* 1. Lift Up */
+.btn-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    border-color: #d4af37; /* Gold border on hover */
+}
+
+/* 2. "Sheen" Animation (The shiny line passing through) */
+.btn-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+    transition: none;
+}
+
+.btn-link:hover::after {
+    left: 100%;
+    transition: 0.5s ease-in-out;
+}
+
+/* --- SPECIAL BUTTON COLORS --- */
+
+/* Gold Button (Website) */
+.gold-btn {
+    background: linear-gradient(to right, #d4af37, #f3d069);
+    color: #fff;
+    border: none;
+}
+.gold-btn .icon-box { color: #fff; }
+.arrow-icon { margin-left: auto; color: white; font-size: 12px;}
+
+/* Instagram */
+.insta-btn:hover .icon-box {
+    background: -webkit-linear-gradient(#f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Facebook */
+.fb-btn:hover .icon-box { color: #1877F2; }
+
+/* Location */
+.location-btn {
+    background-color: #fdfdfd;
+    border-left: 4px solid #580c1f;
+    border-radius: 12px; /* Slight change shape for location */
+}
+
+/* --- FOOTER --- */
+.address-section {
+    background-color: #fafafa;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 11px;
+    text-align: center;
+    color: #555;
+    line-height: 1.6;
+    border: 1px dashed #d4af37;
+    margin-top: 10px;
+}
+
+.footer {
+    text-align: center;
+    font-size: 10px;
+    color: #999;
+    padding: 15px 0;
+}
+
+
+
+/* --- PREVIOUS CSS REMAINS THE SAME --- */
+
+/* ... (Your existing CSS code) ... */
+
+
+/* --- NEW FOOTER STYLING --- */
+.footer {
+    text-align: center;
+    font-size: 10px;
+    color: #999;
+    padding: 15px 0;
+    margin-top: 10px;
+}
+
+/* Container for the credit line */
+.rom-credit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px; /* Space between text and icon */
+    margin-top: 5px;
+    font-size: 9px; /* Slightly smaller than main footer text */
+    opacity: 0.8;
+}
+
+/* The WhatsApp Icon */
+.rom-wp {
+    color: #25D366; /* WhatsApp Green */
+    text-decoration: none;
+    font-size: 12px; /* Icon size */
+    transition: transform 0.2s;
+    display: flex; /* Fixes alignment */
+}
+
+.rom-wp:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+}
